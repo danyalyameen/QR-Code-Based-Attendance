@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:qr_cdoe_based_attendance/Counter/Bloc/counter_bloc.dart';
-import 'package:qr_cdoe_based_attendance/Counter/View/counter_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:qr_cdoe_based_attendance/Features/Home/UI/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ScreenUtilInit(
+      designSize: Size(411, 915),
+      builder: (context, child) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,10 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: BlocProvider(
-        create: (context) => CounterBloc(),
-        child: Dashboard(),
-      ),
+      home: HomeView(),
     );
   }
 }
