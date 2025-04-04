@@ -4,8 +4,6 @@ import 'package:qr_cdoe_based_attendance/Widgets/custom_text_field.dart';
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
 
-  final TextEditingController
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
